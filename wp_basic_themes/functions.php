@@ -34,5 +34,5 @@ if(function_exists('add_theme_support')) {
 // Loads the theme's translated strings. 
 // add_action('init', '_theme_textdomain');
 function _theme_textdomain() {
-	load_theme_textdomain(, get_template_directory() . '/languages');
+	// load_theme_textdomain(, get_template_directory() . '/languages');
 }

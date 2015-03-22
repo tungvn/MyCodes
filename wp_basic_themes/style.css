@@ -1,7 +1,26 @@
+/* 
+Theme Name: 
+Theme URI: http://timeuniversal.vn
+Author: Time Universal
+Author URI: http://blog.timeuniversal.vn
+Description: Designed by Time Universal Communications
+Version: 1.0 
+*/
+
 /* Reset CSS */
 *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box}
 html, body {font-family: Arial, sans-serif; font-size: 14px; line-height: 25px; font-weight: 400}
 img {width: 100%;border: none}
+table, tr, th, td{
+	border-collapse: collapse;
+	border: 1px solid #777;
+	padding: 5px;
+}
+
+@font-face{
+	/* font-family: 'UTM Regular';
+	src: url('fonts/utm-avo.ttf'); */
+}
 
 /* Useful style */
 .clearfix:before, .clearfix:after {content: " ";display: table}

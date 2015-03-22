@@ -70,7 +70,7 @@ add_action('manage_posts_custom_column' , 'post_series_custom_column', 10, 2);
  * @param $column string
  * @param $post_id number
  * add content to post column
- * action manage_<post-type>_custom_column
+ * action manage_<post-type>_posts_custom_column
  */
 function post_series_custom_column($column, $post_id){
 	switch ($column) {
