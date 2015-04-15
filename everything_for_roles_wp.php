@@ -6,6 +6,7 @@ add_action('init', 'custom_change_role_name');
  * @action init
  * @version 1.0 | WP 3.0 up
  */
+
 function custom_change_role_name() {
 	global $wp_roles;
 
@@ -40,7 +41,9 @@ function custom_change_role_name() {
 	}
 }
 
-// add_action('admin_init', 'change_contributor_caps');
+/* Add, edit and remove capability
+ */
+add_action('admin_init', 'change_contributor_caps');
 function change_contributor_caps() {
 	$role = get_role('contributor');
 
