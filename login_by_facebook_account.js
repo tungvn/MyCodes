@@ -28,6 +28,10 @@ function status_change_callback(response) {
     // Else, we need user login their facebook acc :3
     else {
         FB.login(function(response) {
+            // If they close the popup
+            if( response.authResponse == null )
+                return false;
+
             check_facebook_login_state();
         }, {scope: 'email,public_profile'});
     }

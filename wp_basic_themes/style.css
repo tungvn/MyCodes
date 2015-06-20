@@ -10,13 +10,14 @@ Version: 1.0
 /* Reset CSS */
 *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box;}
 html, body {font-family: Arial, sans-serif; font-size: 14px; line-height: 25px; font-weight: 400;}
-img {width: 100%;border: none;}
+img {max-width: 100%; width: auto; height: auto; border: none;}
 table, tr, th, td{
 	border-collapse: collapse;
 	border: 1px solid #777;
 	padding: 5px;
 }
 a {text-decoration: none; color: inherit; font-size: inherit;}
+input, textarea{padding: 5px;}
 
 @font-face{
 	/* font-family: 'UTM Regular';
@@ -29,14 +30,18 @@ a {text-decoration: none; color: inherit; font-size: inherit;}
 .container {width: 1200px;margin: 0 auto;}
 .fl {float: left;}
 .fr {float: right;}
-.lsn {list-style: none;}
+.fri {float: right !important;}
+.lsn, .lsn > li {list-style: none;}
 .posr {position: relative;}
 .posa {position: absolute;}
 .posf {position: fixed;}
 .row {width: 100%; display: block;}
 .row .rw-left {float: left;}
 .row .rw-right {float: right;}
+
 .hidden {display: none;}
+.dtb {display: table;}
+.dtbc {display: table-cell;}
 
 .pl0 {padding-left: 0 !important;}
 .pr0 {padding-right: 0 !important;}
@@ -69,3 +74,4 @@ a {text-decoration: none; color: inherit; font-size: inherit;}
 .fluid .grid10 {width:83.3333333333%;}
 .fluid .grid11 {width:91.6666666666%;}
 .fluid .grid12 {width:100%;}
+

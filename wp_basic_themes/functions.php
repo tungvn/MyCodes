@@ -2,6 +2,9 @@
 $_settings = array(
 	'prefix' => ''
 );
+
+include_once( get_template_directory() . '/includes/init.php' );
+
 // Adding Enqueue scripts 
 add_action('wp_enqueue_scripts', 'enqueue_scripts_styles');
 function enqueue_scripts_styles() {
@@ -12,12 +15,6 @@ function enqueue_scripts_styles() {
 	wp_enqueue_script('scripts', get_template_directory_uri() . '/scripts/main.js', array(), '1.0', false);
 
 }
-
-// Include custom posttype
-// include_once(get_template_directory() . '/includes/agency.php');
-
-// Remove AdminBar 
-add_filter('show_admin_bar', '__return_false');
 
 // Register nav menu
 register_nav_menus(array(
@@ -36,3 +33,6 @@ if(function_exists('add_theme_support')) {
 function _theme_textdomain() {
 	// load_theme_textdomain(, get_template_directory() . '/languages');
 }
+
+// Include custom posttype
+// include_once(get_template_directory() . '/includes/agency.php');
