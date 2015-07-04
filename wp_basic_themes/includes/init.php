@@ -42,6 +42,7 @@ add_action('init', 'remove_comment_support', 100);
 function remove_comment_support() {
     remove_post_type_support( 'post', 'comments' );
     remove_post_type_support( 'page', 'comments' );
+    remove_post_type_support( 'attachment', 'comments' );
 }
 
 /* Functions */
