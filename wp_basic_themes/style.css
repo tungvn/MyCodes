@@ -10,24 +10,24 @@ Version: 1.0
 /* Reset CSS */
 *, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box;}
 html, body {font-family: Arial, sans-serif; font-size: 14px; line-height: 25px; font-weight: 400;}
-img {max-width: 100%; width: auto; height: auto; border: none;}
 table, tr, th, td{
-	border-collapse: collapse;
-	border: 1px solid #777;
-	padding: 5px;
+    border-collapse: collapse;
+    border: 1px solid #777;
+    padding: 5px;
 }
 a {text-decoration: none; color: inherit; font-size: inherit;}
-input, textarea{padding: 5px;}
+input, textarea, select{padding: 5px;}
+li{list-style-position: inside;}
 
 @font-face{
-	/* font-family: 'UTM Regular';
-	src: url('fonts/utm-avo.ttf'); */
+    /* font-family: 'UTM Regular';
+    src: url('fonts/utm-avo.ttf'); */
 }
 
 /* Useful style */
-.clearfix:before, .clearfix:after {content: " ";display: table;}
+.clearfix:before, .clearfix:after {content: " "; display: table;}
 .clearfix:after {clear: both;}
-.container {width: 1200px;margin: 0 auto;}
+.container {max-width: 1200px; width: 92%; margin: 0 auto;}
 .fl {float: left;}
 .fr {float: right;}
 .fri {float: right !important;}
@@ -35,9 +35,11 @@ input, textarea{padding: 5px;}
 .posr {position: relative;}
 .posa {position: absolute;}
 .posf {position: fixed;}
-.row {width: 100%; display: block;}
+.row, .section {width: 100%; display: block;}
 .row .rw-left {float: left;}
 .row .rw-right {float: right;}
+
+.imgdf > img {max-width: 100%; width: auto; height: auto; border: none;}
 
 .hidden {display: none;}
 .dtb {display: table;}
@@ -52,26 +54,31 @@ input, textarea{padding: 5px;}
 .tdu {text-decoration: underline;}
 .tdn {text-decoration: none;}
 .fwb {font-weight: bold;}
+.fwsb {font-weight: 600;}
 
 .fluid {*zoom: 1; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box;}
 .fluid:before, .fluid:after {display: table; content: "";}
 .fluid:after {clear: both;}
-.fluid .grid1, .fluid .grid2, .fluid .grid1-5, .fluid .grid3, .fluid .grid4, .fluid .grid5, .fluid .grid6, .fluid .grid7, .fluid .grid8, .fluid .grid9, .fluid .grid10, .fluid .grid11, .fluid .grid12 {
-    display: block; width: 100%; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; float: left;
+
+.fluid .grid1, .fluid .grid2, .fluid .grid1-5, 
+.fluid .grid3, .fluid .grid4, .fluid .grid5, 
+.fluid .grid6, .fluid .grid7, .fluid .grid8, 
+.fluid .grid9, .fluid .grid10, .fluid .grid11, .fluid .grid12 {
+    display: block; position: relative; float: left;
     padding-left: 17.5px;
     padding-right: 17.5px;
 }
-.fluid .grid1 {width:8.33333333333%;}
-.fluid .grid2 {width:16.6666666666%;}
-.fluid .grid1-5 {width: 20%;}
-.fluid .grid3 {width:25%;}
-.fluid .grid4 {width:33.3333333333%;}
-.fluid .grid5 {width:41.6666666666%;}
-.fluid .grid6 {width:50%;}
-.fluid .grid7 {width:58.3333333333%;}
-.fluid .grid8 {width:66.6666666666%;}
-.fluid .grid9 {width:75%;}
-.fluid .grid10 {width:83.3333333333%;}
-.fluid .grid11 {width:91.6666666666%;}
-.fluid .grid12 {width:100%;}
+.grid1 {width:8.33333333333%;}
+.grid2 {width:16.6666666666%;}
+.grid1-5 {width: 20%;}
+.grid3 {width:25%;}
+.grid4 {width:33.3333333333%;}
+.grid5 {width:41.6666666666%;}
+.grid6 {width:50%;}
+.grid7 {width:58.3333333333%;}
+.grid8 {width:66.6666666666%;}
+.grid9 {width:75%;}
+.grid10 {width:83.3333333333%;}
+.grid11 {width:91.6666666666%;}
+.grid12 {width:100%;}
 
