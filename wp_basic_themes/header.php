@@ -2,13 +2,17 @@
 	'app_id' => '',
 	'type' => 'article',
 	'title' => get_bloginfo('name'),
-	'url' => home_url() . $_SERVER['REQUEST_URI'],
-	'image' => get_template_directory_uri() . '/screenshot.png',
+	'url' => home_url(),
+	'image' => get_template_directory_uri() . '/screenshot.jpg',
 	'description' => get_bloginfo('description'),
 	'author' => 'Time Universal',
 );
 
 if( is_tax() || is_category() || is_tag() ) {
+	if( !is_category() )
+		$metaProperty['url'] = get_term_link( get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+	else
+		$metaProperty['url'] = get_category_link( get_query_var( 'cat' ) );
 	$metaProperty['title'] = single_term_title( '', false ) .' | '. get_bloginfo('name');
 	$metaProperty['description'] = term_description() ? term_description() : $metaProperty['description'];
 }
@@ -31,7 +35,8 @@ if( is_single() || is_page() ) {
 	$metaProperty['title'] = $post->post_title;
 	$metaProperty['description'] = strip_tags( $postDescription );
 	$metaProperty['image'] = $imageSource ? $imageSource[0] : $metaProperty['image'];
-	$metaProperty['author'] = get_the_author_meta( 'display_name', $post->post_author );
+	$metaProperty['url'] = get_permalink( $post->ID );
+	// $metaProperty['author'] = get_the_author_meta( 'display_name', $post->post_author );
 }
 
 if( is_paged() ) {

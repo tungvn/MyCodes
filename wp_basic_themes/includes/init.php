@@ -20,7 +20,8 @@ body.login div#login h1 a{background: url("<?php echo get_template_directory_uri
 <?php }
 
 // Remove AdminBar 
-add_filter('show_admin_bar', '__return_false');
+if( current_user_can( 'manage_categories' ) )
+    add_filter('show_admin_bar', '__return_false');
 
 remove_action('wp_head', 'wp_generator'); 
 remove_action('wp_head', 'wlwmanifest_link');
